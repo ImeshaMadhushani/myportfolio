@@ -1,73 +1,53 @@
+import React from 'react';
 import ProjectCard from './ProjectCard';
-import { motion } from 'framer-motion';
+
+const projects = [
+    {
+        title: 'EstateHub – Real Estate Website',
+        description:
+            'Designed and developed a responsive real estate platform utilizing HTML, Bootstrap, and JavaScript, enabling users to browse listings and connect with agents.',
+        technologies: ['HTML', 'Bootstrap', 'JavaScript'],
+        demoLink: 'https://real-state-two-phi.vercel.app/',
+        codeLink: 'https://github.com/ImeshaMadhushani/Real-State.git',
+        image: '/assets/realstate.jpg',
+    },
+    {
+        title: 'Clean Partner– Cleaning Service Landing Page',
+description:
+    'I designed and developed a visually appealing and accessible cleaning service landing page using HTML and CSS, focusing on smooth navigation and improved user interaction.',
+        technologies: ['HTML', 'Bootstrap', 'JavaScript'],
+        demoLink: 'https://cleaning-service-iota.vercel.app/',
+        codeLink: 'https://github.com/ImeshaMadhushani/CleaningService.git',
+        image: '/assets/cleaning.jpg',
+    },
+    {
+        title: 'BurgerHouse– Burger Shop Landing Page ',
+    description:
+    'I developed a modern and engaging landing page for a burger shop using HTML, CSS, and JavaScript, integrating interactive elements to boost user engagement.',
+        technologies: ['HTML', 'Bootstrap', 'JavaScript'],
+        demoLink: 'https://burgur-house-olive.vercel.app/',
+        codeLink: 'https://github.com/ImeshaMadhushani/BurgurHouse.git',
+        image: '/assets/burger.jpg',
+    },
+    {
+        title: 'BlogHub– Blog Website', 
+        description:
+            'Built a dynamic blog with React, Firebase, and Tailwind CSS! Users can log in, create/edit/delete posts, and enjoy a responsive layout. Real-time CRUD with Firebase and styled with Tailwind.',
+        technologies: ['React', 'Tailwindcss', 'Firebase'],
+        demoLink: 'https://blog-hub-blue.vercel.app/',
+        codeLink: 'https://github.com/ImeshaMadhushani/BlogHub.git',
+        image: '/assets/bloghub.jpg',
+    },
+];
 
 const ProjectsSection = () => {
-    const projects = [
-        {
-            title: 'E-Commerce Platform',
-            description: 'A full-featured online store with 3D product visualization and interactive product configurator.',
-            technologies: ['React', 'Three.js', 'Node.js', 'MongoDB', 'WebGL'],
-            demoLink: '#',
-            codeLink: '#'
-        },
-        {
-            title: 'Interactive Data Dashboard',
-            description: '3D visualization of complex data sets with real-time filtering and dynamic chart generation.',
-            technologies: ['D3.js', 'Three.js', 'Vue.js', 'Firebase', 'WebGL'],
-            demoLink: '#',
-            codeLink: '#'
-        },
-        {
-            title: 'VR Portfolio Experience',
-            description: 'A virtual reality tour showcasing creative work in an immersive 3D environment.',
-            technologies: ['React', 'Three.js', 'WebXR', 'GLSL Shaders', 'Blender'],
-            demoLink: '#',
-            codeLink: '#'
-        }
-    ];
-
     return (
-        <section id="projects" className="py-24 bg-gray-900 bg-opacity-60">
-            <div className="container mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-indigo-400 to-teal-400 bg-clip-text text-transparent">
-                            Featured Projects
-                        </span>
-                    </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Explore my latest work combining modern web technologies with immersive 3D experiences.
-                    </p>
-                </motion.div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
-                    ))}
-                </div>
-
-                <motion.div
-                    className="text-center mt-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    viewport={{ once: true }}
-                >
-                    <a
-                        href="https://github.com/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-medium px-8 py-3 rounded-full transition-all"
-                    >
-                        See More Projects on GitHub
-                    </a>
-                </motion.div>
+        <section id="projects" className="py-12 px-4 from-black via-gray-900 to-black text-white">
+            <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                ))}
             </div>
         </section>
     );

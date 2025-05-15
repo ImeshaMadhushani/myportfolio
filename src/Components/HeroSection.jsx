@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FiArrowRight, FiCode, FiDatabase, FiLayers } from 'react-icons/fi';
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
+
 
 const HeroSection = () => {
     const containerVariants = {
@@ -23,14 +25,6 @@ const HeroSection = () => {
         }
     };
 
-    const TechBadge = ({ children, className }) => (
-        <motion.span
-            variants={itemVariants}
-            className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-opacity-20 mr-2 mb-2 ${className}`}
-        >
-            {children}
-        </motion.span>
-    );
 
     return (
         <section className="bg-gradient-to-b from-[#0a1128] to-[#0f172a] min-h-screen flex items-center justify-center px-6 overflow-hidden">
@@ -53,20 +47,22 @@ const HeroSection = () => {
 
                         <motion.h1
                             variants={itemVariants}
-                            className="text-4xl md:text-6xl font-bold text-white leading-tight"
+                            className="text-4xl md:text-5xl font-bold text-white leading-tight"
                         >
                             I'm <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">Madhushani</span>,<br />a{' '}
                             <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
                                 <TypeAnimation
                                     sequence={[
+                                        'Web Developer',
+                                        1000,
                                         'Full-Stack Developer',
-                                        1500,
+                                        1000,
                                         'Frontend Developer',
-                                        1500,
+                                        1000,
                                         'Backend Developer',
-                                        1500,
+                                        1000,
                                         'UI/UX Enthusiast',
-                                        1500,
+                                        1000,
                                     ]}
                                     wrapper="span"
                                     repeat={Infinity}
@@ -84,19 +80,30 @@ const HeroSection = () => {
                             that make a real-world impact.
                         </motion.p>
 
-                        <motion.div variants={itemVariants} className="mb-8">
-                            <motion.div className="flex flex-wrap">
-                                <TechBadge className="bg-blue-500 text-blue-100">React</TechBadge>
-                                <TechBadge className="bg-green-500 text-green-100">Node.js</TechBadge>
-                                <TechBadge className="bg-yellow-500 text-yellow-100">JavaScript</TechBadge>
-                                <TechBadge className="bg-purple-500 text-purple-100">SpringBoot</TechBadge>
-                                <TechBadge className="bg-red-500 text-red-100">MongoDB</TechBadge>
-                                <TechBadge className="bg-pink-500 text-pink-100">MySQL</TechBadge>
-                                <TechBadge className="bg-teal-500 text-teal-100">Tailwind CSS</TechBadge>
-                                <TechBadge className="bg-indigo-500 text-indigo-100">Express.js</TechBadge>
-                                <TechBadge className="bg-gray-500 text-gray-100">REST APIs</TechBadge>
-                            </motion.div>
+                        <motion.div
+                            variants={itemVariants}
+                            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-8 mb-8"
+                        >
+                            <a
+                                href="https://www.linkedin.com/in/imesha-madhushani-21a499252/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 rounded-full border border-white/20 text-white hover:border-white/40 hover:bg-white/5 transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+                            >
+                                <FiLinkedin className="text-xl" />
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://github.com/ImeshaMadhushani"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 rounded-full border border-white/20 text-white hover:border-white/40 hover:bg-white/5 transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+                            >
+                                <FiGithub className="text-xl" />
+                                GitHub
+                            </a>
                         </motion.div>
+
 
                         <motion.div
                             variants={itemVariants}
