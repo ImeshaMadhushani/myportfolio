@@ -8,6 +8,7 @@ import ProjectsSection from "../Components/ProjectsSection";
 import ContactSection from "../Components/ContactSection";
 import Footer from "../Components/Footer";
 import AnimatedBackground from "../Components/AnimatedBackground";
+import CertificatesSection from "../Components/CertificatesSection";
 
 const Home = () => {
     useEffect(() => {
@@ -76,6 +77,15 @@ const Home = () => {
                     viewport={{ once: true }}
                 >
                     <ProjectsSection />
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <CertificatesSection />
                 </motion.div>
 
                 <motion.div
