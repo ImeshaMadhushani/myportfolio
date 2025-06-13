@@ -9,6 +9,7 @@ import ContactSection from "../Components/ContactSection";
 import Footer from "../Components/Footer";
 import AnimatedBackground from "../Components/AnimatedBackground";
 import CertificatesSection from "../Components/CertificatesSection";
+import EducationSection from "../Components/EducationSection";
 
 const Home = () => {
     useEffect(() => {
@@ -20,14 +21,20 @@ const Home = () => {
                         "bg-gray-900",
                         "bg-opacity-90",
                         "backdrop-blur-sm",
-                        "shadow-md"
+                        "shadow-md",
+                        "transition-colors",
+                        "duration-300",
+                        "ease-in-out"
                     );
                 } else {
                     header.classList.remove(
                         "bg-gray-900",
                         "bg-opacity-90",
                         "backdrop-blur-sm",
-                        "shadow-md"
+                        "shadow-md",
+                        "transition-colors",
+                        "duration-300",
+                        "ease-in-out"
                     );
                 }
             }
@@ -37,65 +44,100 @@ const Home = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Motion variants for reuse
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <div className="bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white min-h-screen scroll-smooth font-sans">
-           <AnimatedBackground />
+            <AnimatedBackground />
             <Navbar />
 
-            <main>
-               
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32 py-12 md:py-20">
+                {/* Hero Section */}
+                <motion.section
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeUp}
                     transition={{ duration: 1, ease: "easeOut" }}
+                    aria-label="Hero Section"
                 >
                     <HeroSection />
-                </motion.div>
+                </motion.section>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                {/* About Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    aria-label="About Me Section"
                 >
                     <AboutSection />
-                </motion.div>
+                </motion.section>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                {/* Education Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    aria-label="Education Section"
+                >
+                    <EducationSection />
+                </motion.section>
+
+                {/* Skills Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
+                    transition={{ duration: 0.8 }}
+                    aria-label="Skills Section"
                 >
                     <SkillsSection />
-                </motion.div>
+                </motion.section>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                {/* Projects Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    aria-label="Projects Section"
                 >
                     <ProjectsSection />
-                </motion.div>
+                </motion.section>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                {/* Certificates Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    aria-label="Certificates Section"
                 >
                     <CertificatesSection />
-                </motion.div>
+                </motion.section>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                {/* Contact Section */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeUp}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    aria-label="Contact Section"
                 >
                     <ContactSection />
-                </motion.div>
+                </motion.section>
             </main>
 
             <Footer />
