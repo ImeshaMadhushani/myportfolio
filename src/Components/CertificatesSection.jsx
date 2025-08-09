@@ -52,7 +52,7 @@ const certificates = [
         issuer: 'Microsoft Learn',
         issueDate: 'August 2025',
         //details: 'Completed a specialization focused on HTML, CSS, and responsive web design.',
-        image: '/assets/ms365.png',
+        image: '/assets/ms365_1.png',
         certificateLink: './assets/ms365.pdf',
         //verificationLink: 'https://www.sololearn.com/en/certificates/CC-VKIL3RF7',
     },
