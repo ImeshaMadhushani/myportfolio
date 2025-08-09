@@ -21,6 +21,15 @@ const certificates = [
         verificationLink: 'https://www.credly.com/badges/5b42b191-77c4-4f7f-8d4e-68fc8c25e5c8/linked_in_profile',
     },
     {
+        title: 'Networking Basics',
+        issuer: 'Cisco Networking Academy',
+        issueDate: 'August 2025',
+        details: 'Achieved student level credential for completing the Networking Basics course.',
+        image: '/assets/networking-basics.png',
+        certificateLink: './assets/NetworkingBasics.pdf',
+        verificationLink: 'https://www.credly.com/badges/d1bc286b-cb61-4962-9828-88e1dd27c10a',
+    },
+    {
         title: 'Introduction to C',
         issuer: 'Sololearn',
         issueDate: 'June 2024',
@@ -37,6 +46,15 @@ const certificates = [
         image: '/assets/mongo.png',
         certificateLink: './assets/mongoDB.pdf',
         verificationLink: 'https://www.sololearn.com/en/certificates/CC-VKIL3RF7',
+    },
+    {
+        title: 'MS-900 Introduction to Microsoft 365: Describe Microsoft 365 apps and services',
+        issuer: 'Microsoft Learn',
+        issueDate: 'August 2025',
+        //details: 'Completed a specialization focused on HTML, CSS, and responsive web design.',
+        image: '/assets/ms365.png',
+        certificateLink: './assets/ms365.pdf',
+        //verificationLink: 'https://www.sololearn.com/en/certificates/CC-VKIL3RF7',
     },
 ];
 

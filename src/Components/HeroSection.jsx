@@ -55,12 +55,12 @@ const HeroSection = () => {
                                     sequence={[
                                         'Web Developer',
                                         1000,
-                                        'Full-Stack Developer',
-                                        1000,
+                                       // 'Full-Stack Developer',
+                                        //1000,
                                         'Frontend Developer',
                                         1000,
-                                        'Backend Developer',
-                                        1000,
+                                        //'Backend Developer',
+                                       // 1000,
                                         'UI/UX Enthusiast',
                                         1000,
                                     ]}
@@ -166,8 +166,8 @@ const HeroSection = () => {
                         <div className="relative rounded-2xl overflow-hidden border-4 border-[#1e293b] shadow-xl group z-10">
                             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/30 via-blue-400/20 to-teal-400/30 mix-blend-overlay z-10 pointer-events-none"></div>
                             <img
-                                src="./assets/hero.jpg"
-                                alt="Madhushani - Backend Developer"
+                                src="./assets/hero3.jpg"
+                                alt="Madhushani"
                                 className="rounded-xl w-full object-cover z-0 transform group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>

@@ -7,16 +7,24 @@ const educationData = [
         institution: 'University of Jaffna',
         period: '2022 – Present',
         location: 'Sri Lanka',
-        description:
-            'Specializing in software development, databases, and systems design. Actively engaged in full-stack projects and UI/UX design.',
+        /* description:
+            'Including software development, databases, and systems design. Actively engaged in full-stack projects and UI/UX design.', */
     },
     {
         degree: 'G.C.E. Advanced Level (A/L)',
         institution: 'Sri Sumangala College, Wariyapola',
         period: '2017 – 2019',
         location: 'Sri Lanka',
-        description:
-            'Completed A/Ls in Physical Science stream with focus on Mathematics, Physics, and Chemistry.',
+        /* description:
+            'Completed A/Ls in Physical Science stream with focus on Mathematics, Physics, and Chemistry.', */
+    },
+    {
+        degree: 'Diploma in Information Technology',
+        institution: 'LPEC Campus',
+        period: '2023 – 2024',
+        location: 'Sri Lanka',
+        /* description:
+            'Completed A/Ls in Physical Science stream with focus on Mathematics, Physics, and Chemistry.', */
     },
 ];
 

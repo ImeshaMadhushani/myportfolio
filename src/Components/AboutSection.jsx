@@ -31,9 +31,9 @@ const AboutSection = () => {
                                 <div className="w-64 h-64 md:w-full md:h-auto aspect-square rounded-full overflow-hidden border-4 border-indigo-500/30 p-1">
                                     <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-indigo-600 to-teal-500">
                                         {/* Replace with actual image */}
-                                        <div className="w-full h-full bg-gray-700 flex items-center justify-center text-white">
+                                        <div className="w-50 h-50 bg-gray-700 flex items-center justify-center text-white">
                                             <img
-                                                src="./assets/hero.jpg"
+                                                src="./assets/hero1.jpg"
                                                 alt="Madhushani - Backend Developer"
                                                 className="rounded-xl w-full object-cover z-0 transform group-hover:scale-105 transition-transform duration-700"
                                             />
@@ -54,7 +54,26 @@ const AboutSection = () => {
                             viewport={{ once: true }}
                             className="md:w-2/3"
                         >
-                            <h3 className="text-2xl font-bold text-white mb-4">Passionate IT undergraduate blending frontend, backend, UI/UX, and AI to build innovative, user-focused digital experiences.</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">
+                                IT undergraduate crafting clean, modern, and user-friendly web experiences.
+                            </h3>
+
+                            <div className="space-y-4 text-gray-300">
+                                <p>
+                                    I’m an IT undergraduate passionate about UX/UI design, frontend development, and creating responsive, visually appealing digital solutions.
+                                </p>
+
+                                <p>
+                                    Skilled in HTML, CSS, JavaScript, and React.js, I focus on building intuitive interfaces that deliver smooth user interactions.
+                                </p>
+
+                                <p>
+                                    Always learning and exploring new tools, I aim to design and develop products that look great and work even better.
+                                </p>
+                            </div>
+
+
+                           {/*  <h3 className="text-2xl font-bold text-white mb-4">Passionate IT undergraduate blending frontend, backend, UI/UX, and AI to build innovative, user-focused digital experiences.</h3>
 
                             <div className="space-y-4 text-gray-300">
                                 <p>
@@ -68,7 +87,7 @@ const AboutSection = () => {
                                 <p>
                                     In addition, I'm expanding my expertise into backend development and Artificial Intelligence. I aim to build robust and scalable systems that work efficiently with modern frontends, while also exploring how intelligent technologies can enhance user experience and automate processes. I'm always eager to learn, take on challenges, and contribute to projects that make a meaningful impact.
                                 </p>
-                            </div>
+                            </div> */}
 
                             <div className="mt-6 flex gap-4">
                                 <button
@@ -76,7 +95,7 @@ const AboutSection = () => {
                                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition-all"
                                     onClick={() => {
                                         const link = document.createElement('a');
-                                        link.href = '/assets/cv.pdf'; // Path to your resume in the public folder
+                                        link.href = '/assets/cv2.pdf'; // Path to your resume in the public folder
                                         link.download = 'My_Resume.pdf'; // Name for the downloaded file
                                         document.body.appendChild(link);
                                         link.click();
