@@ -19,7 +19,7 @@ const educationData = [
             'Completed A/Ls in Physical Science stream with focus on Mathematics, Physics, and Chemistry.', */
     },
     {
-        degree: 'Diploma in Information Technology',
+        degree: 'Diploma in Human Resource Management',
         institution: 'LPEC Campus',
         period: '2023 – 2024',
         location: 'Sri Lanka',
